@@ -2,7 +2,9 @@ import Button from "../Elements/Button";
 import InputForm from "../Elements/Input";
 import FormLogin from "../Fragments/FormLogin";
 
-const AuthLayouts = () => {
+const AuthLayouts = (props) => {
+  const { children } = props;
+
   return (
     <div className="flex justify-center min-h-screen items-center bg-sky-500">
       <div className="w-full max-w-md rounded-md border bg-white">
@@ -10,9 +12,7 @@ const AuthLayouts = () => {
         <p className="text-center text-lg mb-6">
           Welcome, please enter your credentials
         </p>
-        <FormLogin />
-
-        <Button textButton="Login" />
+        {children}
       </div>
     </div>
   );

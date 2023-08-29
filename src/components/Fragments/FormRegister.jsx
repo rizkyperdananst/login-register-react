@@ -1,9 +1,10 @@
 import InputForm from "../Elements/Input";
 import Button from "../Elements/Button";
 
-const FormLogin = () => {
+const FormRegister = () => {
   return (
-    <form>
+    <form action="">
+      <InputForm name="name" label="Name" type="text" placeholder="Name" />
       <InputForm name="email" label="Email" type="email" placeholder="Email" />
       <InputForm
         name="password"
@@ -12,9 +13,9 @@ const FormLogin = () => {
         placeholder="Password"
       />
 
-      <Button textButton="Login" />
+      <Button textButton="Register" />
     </form>
   );
 };
 
-export default FormLogin;
+export default FormRegister;
